@@ -1,52 +1,77 @@
 public static void main(String[] args) {
+	//declaring the main method
 	String[] foodTypes = getFoodTypes();
+	//creating a string array of different types of food
 	String myType = foodTypes[2];
+	//setting the variable myType to the food type in position 2 of the array; since arrays start at position 0, it is, in reality, in the 3rd positon
 
 	String[] foodsOfMyType = getFoodsByType(myType);
+	//retrieving the variable myType and placing it within a new variable, foodsOfMyType
 	
 	for (String food : foodsOfMyType) {
 		System.out.println(food);
+		//equating a new vairable food to the variable foodsOfMyType and printing it out to the console
 	}
+	//if we actually run this, however, since there was no array passed, the value will be null
 }
 
 public static String[] getFoodTypes() {
+	//this passes a getFoodTypes method as a string array
 	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
+	//this creates an array foodTypes
 	return foodTypes;
+	//this returns the array
 }
 
 public static String[] getFoodsByType(String type) {
+	//this passes a string type through a getFoodsByType method, still as a string array
 	String[] foods = new String[3];
+	//this creaes a new array new String that contains 3 open spaces
 
 	switch(type) {
+		//this creates a switch statement for the getFoodsByType arrays
 	case "breakfast":
 		foods[0] = "pancakes";
 		foods[1] = "cereal";
 		foods[2] = "omelette";
 		break;
+		//this creates an array for breakfast with pancakes, cereal, and omelette as breakfast[0], breakfast[1] and breakfast[2]
+		//the break statement "flips" the switch statement for breakfast "off"
 	case "lunch":
 		foods[0] = "sandwich";
 		foods[1] = "salad";
 		foods[2] = "soup";
 		break;
+		//this creates an array for lunch with sandwich, salad, and soup as lunch[0], lunch[1] and lunch[2]
+		//the break statement "flips" the switch statement for lunch "off"
 	case "dinner":
 		foods[0] = "curry";
 		foods[1] = "stir fry";
 		foods[2] = "burger";
 		break;
+		//this creates an array for dinner with curry, stir fry, and burger as dinnerdin[0], dinner[1] and dinner[2]
+		//the break statement "flips" the switch statement for dinner "off"
 	case "dessert":
 		foods[0] = "cake";
 		foods[1] = "ice cream";
 		foods[2] = "candy";
 		break;
+		//this creates an array for dessert with cake, ice cream, and candy as dessert[0], dessert[1] and dessert[2]
+		//the break statement "flips" the switch statement for dessert "off"
 	case "snack":
 		foods[0] = "chips";
 		foods[1] = "apple";
 		foods[2] = "samosa";
 		break;
+		//this creates an array for snack with chips, apple, and samosa as snack[0], snack[1] and snack[2]
+		//the break statement "flips" the switch statement for snack "off"
 	default:
 		// add your own
 		break;
+		//the default statement is currently commented out, but would be a method to add your own food 
+		//to an array and use it as the output.  The break statement is simply there in case the default switch ever needs
+		//turning "off."
 	}
 
 	return foods;
-}
+}	//this final statement returns the variable foods
