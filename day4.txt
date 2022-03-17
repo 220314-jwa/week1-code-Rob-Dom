@@ -1,12 +1,15 @@
 public class Main {
 	public static void main(String[] args) {
 		Javalin app = Javalin.create();
-
+		//these first 3 lines establish the main class, the main method, and the creation of the app variable
 		app.start();
-
+		//this command helps you start the app variable for the created Javalin app
 		app.get("foods", ctx -> {
 			Food myFood = new Food("carrots", "vegetable");
 			ctx.result("You got: " + myFood.name);
+			//this calls the app to get foods, which is put in string form, with the context (ctx) that myFood
+			//is equal to the new Food carrots and the new Food vegetable.  The end result of the context (ctx)
+			//is the string you got with the output from the myFood.name object at the end
 		});
 	}
 }
