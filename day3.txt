@@ -1,10 +1,14 @@
 public class Food {
 	public String name;
 	public String type;
+	//line 1 is creating the public class Food
+	//lines 2 and 3 establish the public String(s) name and type respectively
 
 	public Food(String name, String type) {
 		this.name = name;
 		this.type = type;
+		//these 3 lines pull String name and String type from the public class Food
+		//these 3 lines also make the instance variables name and type equivalent to the Strings name and type
 	}
 
 	public void cook() {
@@ -12,6 +16,8 @@ public class Food {
 			name = "cooked " + name;
 		}
 	}
+	//this creates a cook class in which if the name variable contains the word "cooked" then the word cooked 
+	//precedes the name
 }
 
 public class Main {
@@ -21,4 +27,7 @@ public class Main {
 
 		System.out.println(myFood.name);
 	}
+	//this creates the main class where the variable myFood is establish as both potato and vegetable
+	//it also contains a method to cook the food through the variable myFood.cook
+	//lastly, it prints out the name of the cooked food
 }
