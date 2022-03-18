@@ -2,24 +2,38 @@
 	<head>
 		<title>Daily Code Review</title>
 	</head>
+	<!-- lines 1 and 2 are opening tags for the html and head tags respectively -->
+	<!-- line 3 puts the title Daily Code Review in the metadata, and line 4 closes the head tag -->
 	<body>
 		<h1>Cook your food!</h1>
+		<!-- line 7 opens the body tag and line 8 establishes a header "Cook your food!" -->
 		<form action="http://localhost:8080/cook">
 			<label for="foodName">Food Name:</label>
 			<input id="foodName" name="foodName" type="text">
 			<br>
 			<button type="submit">Submit</button>
 		</form>
+		<!-- line 10 opens the form element with the action tag linking to a locally hosted website -->
+		<!-- line 11 labels the foodName element as Food Name, along with opening and closing the label element -->
+		<!-- line 12 uses the self-closing elemnt input with foodName as the id and name and the type as text -->
+		<!-- line 13 is a self-closing line break and line 14 adds a submit button to the bottom of the input -->
 	</body>
 </html>
+<!-- line 20 closes the body tag and line 21 closes the html tag -->
 
 public static void main(String[] args) {
 	Javalin app = Javalin.create();
 	app.start();
-
+	//line 24 establishes the main method, line 25 creates the Javalin app, and line 26 starts said app
 	app.get("cook", ctx -> {
 		String foodSent = ctx.formParam("foodName");
 		String cookedFood = "cooked " + foodSent;
 		ctx.result("Here's your food! <br>" + cookedFood);
+		//the app, in line 28, gets the string cook plus the context, in the next 3 lines, of what food to cook
+		//in line 29, the String variable foodSent is given the context of the foodName parameter 
+		//line 30 uses the String variable cookedFood when the variable foodSent has been cooked
+		//this is done with the string "cooked" and the aforementioned foodSent variable
+		//line 31 resolves a result to the context: the string value Here's your food,
+		//a line break that is mistakenly included in the string value, and the cookedFood variable 
 	});
 }
