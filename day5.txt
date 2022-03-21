@@ -37,3 +37,8 @@ public static void main(String[] args) {
 		//a line break that is mistakenly included in the string value, and the cookedFood variable 
 	});
 }
+
+<!--the html portion of this file includes a head tag with title metadata, then in the body it lets you "cook" your food
+in your local browser-->
+/*in the Java portion of this file, the main method creates a Javalin app to facilitate the process of the html code and
+starts the app with the context that the "food" you send to the app is what ends up being cooked*/
