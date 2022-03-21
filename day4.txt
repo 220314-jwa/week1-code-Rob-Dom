@@ -13,3 +13,7 @@ public class Main {
 		});
 	}
 }
+
+/* the main method in this class creates an app called Javalin, starts said app, and gets the function foods with the 
+context of the myFood variable being equal to the string calues carrots and vegetable, results in you getting the 
+result of the myFood variable, carrots and vegetable.*/
