@@ -17,3 +17,6 @@ if (score == 80) {
 
 System.out.println(result);
 //prints the result of the if/else statement to the command line
+
+/*this code sets an integer score and prints out a result as a string; the result is calculated by using and if/else 
+statement*/
