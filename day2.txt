@@ -75,3 +75,6 @@ public static String[] getFoodsByType(String type) {
 
 	return foods;
 }	//this final statement returns the variable foods
+
+/* This file's main method creates a string array which is created with switch statements relating to the variable 
+foodsOfMyType  */
