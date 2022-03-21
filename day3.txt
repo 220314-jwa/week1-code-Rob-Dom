@@ -31,3 +31,6 @@ public class Main {
 	//it also contains a method to cook the food through the variable myFood.cook
 	//lastly, it prints out the name of the cooked food
 }
+
+/* this code starts with the food method, in which we which we establish food and type then connect them to the this 
+keyword; it also defines cooking the food.  The main method is essentially there to print the final result */
